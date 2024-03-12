@@ -40,3 +40,30 @@
 .read-the-docs {
   color: #888;
 } */
+
+.heading{
+  text-align: center;
+  font-size: 36px;
+  line-height: 40px;
+  width: 100%;
+  overflow: hidden;
+  font-weight:bold ;
+  padding: 5rem 0;
+  animation:  text 4s steps(15) infinite alternate;
+  background: linear-gradient(to left,#186c46,#009efd,#b645ba);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-wrap: nowrap;
+}
+
+@keyframes text{
+  0%{
+    width: 0ch;
+  }
+  50%{
+    width: 18ch;
+  }
+  100%{
+    width: 0ch;
+  }
+}

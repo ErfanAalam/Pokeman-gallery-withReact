@@ -7,7 +7,9 @@ function App() {
 
   return (
     <>
-      <h2 className="text-center text-4xl font-bold py-20 heading">Pokeman's Kingdom</h2>
+      <div className="flex justify-center">
+      <h2 className="heading">Pokeman's Kingdom</h2>
+      </div>
       <div className="flex flex-wrap px-12">
         <Pokemancards num={1} />
         <Pokemancards num={2} />

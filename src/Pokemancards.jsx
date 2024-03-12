@@ -37,7 +37,7 @@ function Pokemancards({ num }) {
   
   return (
     <>
-      <div className="flex flex-col justify-center text-center mx-auto rounded-[30px] p-6 m-4 border-2 border-black min-w-[160px] items-center bg-yellow-200">
+      <div className="flex flex-col justify-center text-center mx-auto rounded-[30px] p-6 m-4 border-2 border-black min-w-[160px] items-center bg-white/30 hover:bg-gradient-to-r from-[#d67be4] to-[#605dbf] backdrop-blur-lg">
         <img src={imageurl} width={120} height={120} alt="" />
 
         <div className="space-y-2">
