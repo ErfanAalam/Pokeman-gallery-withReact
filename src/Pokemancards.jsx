@@ -6,7 +6,7 @@ function Pokemancards({ num }) {
   const [stats_name, setstats_name] = useState([]);
   const [stats_value, setstats_value] = useState([]);
   const [hw, sethw] = useState([]);
-  const imageurl = `https:raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${num}.svg`;
+  const imageurl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${num}.svg`;
   const [clicked,setclicked] = useState(false)
 
 
