@@ -3,11 +3,11 @@ import Pokemancards from "./Pokemancards";
 
 
 function App() {
- 
+
 
   return (
     <>
-      <h2 className="text-center text-4xl font-bold py-20 heading">Pokeman Kingdom</h2>
+      <h2 className="text-center text-4xl font-bold py-20 heading">Pokeman's Kingdom</h2>
       <div className="flex flex-wrap px-12">
         <Pokemancards num={1} />
         <Pokemancards num={2} />
@@ -30,6 +30,8 @@ function App() {
         <Pokemancards num={19} />
         <Pokemancards num={20} />
       </div>
+
+      
     </>
   );
 }
