@@ -40,7 +40,7 @@ const Card = () => {
         // console.log(pokemonData);
       });
     });
-  }, []);
+  }, [limit]);
 
   let handlechange = (index) => {
     if (clickedIndex === index) {
