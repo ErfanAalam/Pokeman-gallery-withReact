@@ -80,7 +80,7 @@ console.log(name);
 
       </form>
       <div className='flex flex-wrap gap-6'>
-        {pokemons.map((pokemon, index) => (
+        {pokemons.filter(pokemon => pokemon.name.includes(name)).map((pokemon, index) => (
           type === "all" ?
 
             <div key={index} className='className="flex flex-col justify-center text-center mx-auto rounded-[30px] p-6 m-4 border-2 border-black min-w-[160px] items-center bg-white/30 hover:bg-gradient-to-r from-[#d67be4] to-[#605dbf] backdrop-blur-lg'>
