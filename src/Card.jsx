@@ -80,6 +80,7 @@ console.log(name);
 
       </form>
       <div className='flex flex-wrap gap-6'>
+        {/* Filter by name and type of pokemon */}
         {pokemons.filter(pokemon => pokemon.name.includes(name)).map((pokemon, index) => (
           type === "all" ?
 
