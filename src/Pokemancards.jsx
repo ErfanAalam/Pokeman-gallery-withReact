@@ -87,3 +87,57 @@ function Pokemancards({ num }) {
 }
 
 export default Pokemancards;
+
+
+
+
+
+// import React from 'react';
+// import axios from 'axios';
+// import { useState, useEffect } from "react";
+
+// const Card = () => {
+//   let limit = 20;
+//   let initialvalue = 0;
+//   const url = `https://pokeapi.co/api/v2/pokemon/?offset=${initialvalue}&limit=${limit}`;
+
+//   const [pokemons, setPokemons] = useState([]);
+
+//   useEffect(() => {
+//     axios.get(url).then((response) => {
+//       const fetches = response.data.results.map(pokemon => axios.get(pokemon.url));
+//       Promise.all(fetches).then(results => {
+//         const pokemonData = results.map(result => ({
+//           name: result.data.name,
+//           weight: result.data.weight,
+//           height: result.data.height,
+//           stats: result.data.stats.map(stat => ({
+//             name: stat.stat.name,
+//             value: stat.base_stat
+//           }))
+//         }));
+//         setPokemons(pokemonData);
+//       });
+//     });
+//   }, []);
+
+//   return (
+//     <div>
+//       {pokemons.map((pokemon, index) => (
+//         <div key={index}>
+//           <h1>{pokemon.name}</h1>
+//           <p>Weight: {pokemon.weight}</p>
+//           <p>Height: {pokemon.height}</p>
+//           <h3>Stats:</h3>
+//           <ul>
+//             {pokemon.stats.map((stat, idx) => (
+//               <li key={idx}>{stat.name}: {stat.value}</li>
+//             ))}
+//           </ul>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+
+// export default Card;
