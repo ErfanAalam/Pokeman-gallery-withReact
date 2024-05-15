@@ -8,7 +8,7 @@ const Card = () => {
   const [pokemons, setPokemons] = useState([]);
   const [clickedIndex, setClickedIndex] = useState(false)
   const [type, setType] = useState("all")
-  const [ name, setName] = useState("")
+  const [name, setName] = useState("")
 
   const handlecount = () => {
     setlimit(limit + 20)
@@ -27,7 +27,8 @@ const Card = () => {
         console.log(results);
         const pokemonData = results.map(result => ({
           type: result.data.types[0].type.name,
-          src: result.data.sprites.back_default,
+          src: result.data.sprites.other.dream_world.
+            front_default,
           name: result.data.name,
           weight: result.data.weight,
           height: result.data.height,
@@ -49,7 +50,7 @@ const Card = () => {
       setClickedIndex(index)
     }
   }
-console.log(name);
+  console.log(name);
 
 
   return (
@@ -86,7 +87,7 @@ console.log(name);
 
             <div key={index} className='className="flex flex-col justify-center text-center mx-auto rounded-[30px] p-6 m-4 border-2 border-black min-w-[160px] items-center bg-white/30 hover:bg-gradient-to-r from-[#d67be4] to-[#605dbf] backdrop-blur-lg'>
               <div key={index}>
-                <img src={pokemon.src} width={"200px"} alt="" />
+               <img src={pokemon.src} width={"200px"} alt="" />
                 <h1>{pokemon.name}</h1>
                 <button className='p-2 bg-gradient-to-r from-[#2af598] to-[#009efd] rounded-lg' onClick={() => handlechange(index)}>
                   {clickedIndex === index ? "Know Less" : "Know More"}
