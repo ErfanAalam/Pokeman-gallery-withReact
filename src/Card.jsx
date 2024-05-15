@@ -86,20 +86,21 @@ const Card = () => {
           type === "all" ?
 
             <div key={index} className='className="flex flex-col justify-center text-center mx-auto rounded-[30px] p-6 m-4 border-2 border-black min-w-[160px] items-center bg-white/30 hover:bg-gradient-to-r from-[#d67be4] to-[#605dbf] backdrop-blur-lg'>
-              <div key={index}>
-               <img src={pokemon.src} width={"200px"} alt="" />
+              <div key={index} className=''>
                 <h1>{pokemon.name}</h1>
+               <img src={pokemon.src} className='w-[200px] h-[300px] p-3' alt="" />
                 <button className='p-2 bg-gradient-to-r from-[#2af598] to-[#009efd] rounded-lg' onClick={() => handlechange(index)}>
                   {clickedIndex === index ? "Know Less" : "Know More"}
                 </button>
                 {
                   clickedIndex === index
                     ?
-                    <div>
+                    <div className=''>
                       <p>Type: {pokemon.type}</p>
                       <p>Weight: {pokemon.weight}</p>
                       <p>Height: {pokemon.height}</p>
-                      <h3>Stats:</h3>
+                      <br />
+                      <h3>Stats</h3>
                       <ul>
                         {pokemon.stats.map((stat, index) => (
                           <li key={index}>{stat.name}: {stat.value}</li>
@@ -117,7 +118,7 @@ const Card = () => {
 
             <div key={index} className='className="flex flex-col justify-center text-center mx-auto rounded-[30px] p-6 m-4 border-2 border-black min-w-[160px] items-center bg-white/30 hover:bg-gradient-to-r from-[#d67be4] to-[#605dbf] backdrop-blur-lg'>
               <div key={index}>
-                <img src={pokemon.src} width={"200px"} alt="" />
+                <img src={pokemon.src}className='w-[200px] h-[300px] p-3' alt="" />
                 <h1>{pokemon.name}</h1>
                 <button className='p-2 bg-gradient-to-r from-[#2af598] to-[#009efd] rounded-lg' onClick={() => handlechange(index)}>
                   {clickedIndex === index ? "Know Less" : "Know More"}
