@@ -85,18 +85,20 @@ const Card = () => {
         {pokemons.filter(pokemon => pokemon.name.toLowerCase().includes(name.toLowerCase())).map((pokemon, index) => (
           type === "all" ?
 
-            <div key={index} className='className="flex flex-col justify-center text-center mx-auto rounded-[30px] p-6 m-4 border-2 border-black min-w-[160px] items-center bg-white/30 hover:bg-gradient-to-r from-[#d67be4] to-[#605dbf] backdrop-blur-lg'>
-              <div key={index} className=''>
-                <h1>{pokemon.name}</h1>
-               <img src={pokemon.src} className='w-[200px] h-[300px] p-3' alt="" />
-                <button className='p-2 bg-gradient-to-r from-[#2af598] to-[#009efd] rounded-lg' onClick={() => handlechange(index)}>
+            <div key={index} className='flip-card flex flex-col justify-center text-center mx-auto rounded-[30px] p-6 m-4 border-2 border-black min-w-[160px] items-center bg-white/30 hover:bg-gradient-to-r from-[#d67be4] to-[#605dbf] backdrop-blur-lg'>
+              <div key={index} className='flip-card-inner'>
+                <div className='flip-card-front'>
+                  <h1>{pokemon.name}</h1>
+                  <img src={pokemon.src} className='w-[200px] h-[300px] p-3' alt="" />
+                <p>Type: {pokemon.type}</p>
+                </div>
+                {/* <button className='p-2 bg-gradient-to-r from-[#2af598] to-[#009efd] rounded-lg' onClick={() => handlechange(index)}>
                   {clickedIndex === index ? "Know Less" : "Know More"}
-                </button>
-                {
+                </button> */}
+                {/* {
                   clickedIndex === index
-                    ?
-                    <div className=''>
-                      <p>Type: {pokemon.type}</p>
+                    ? */}
+                    <div className='flip-card-back'>
                       <p>Weight: {pokemon.weight}</p>
                       <p>Height: {pokemon.height}</p>
                       <br />
@@ -107,8 +109,8 @@ const Card = () => {
                         ))}
                       </ul>
                     </div>
-                    : ""
-                }
+                    {/* : ""
+                } */}
               </div>
 
             </div>
@@ -116,29 +118,31 @@ const Card = () => {
             :
             type === pokemon.type &&
 
-            <div key={index} className='className="flex flex-col justify-center text-center mx-auto rounded-[30px] p-6 m-4 border-2 border-black min-w-[160px] items-center bg-white/30 hover:bg-gradient-to-r from-[#d67be4] to-[#605dbf] backdrop-blur-lg'>
-              <div key={index}>
-                <img src={pokemon.src}className='w-[200px] h-[300px] p-3' alt="" />
-                <h1>{pokemon.name}</h1>
-                <button className='p-2 bg-gradient-to-r from-[#2af598] to-[#009efd] rounded-lg' onClick={() => handlechange(index)}>
+            <div key={index} className='flip-card flex flex-col justify-center text-center mx-auto rounded-[30px] p-6 m-4 border-2 border-black min-w-[160px] items-center bg-white/30 hover:bg-gradient-to-r from-[#d67be4] to-[#605dbf] backdrop-blur-lg'>
+              <div key={index} className='flip-card-inner'>
+                <div className="flip-card-front">
+                  <h1>{pokemon.name}</h1>
+                  <img src={pokemon.src} className='w-[200px] h-[300px] p-3' alt="" />
+                <p>Type: {pokemon.type}</p>
+                </div>
+                {/* <button className='p-2 bg-gradient-to-r from-[#2af598] to-[#009efd] rounded-lg' onClick={() => handlechange(index)}>
                   {clickedIndex === index ? "Know Less" : "Know More"}
-                </button>
-                {
+                </button> */}
+                {/* {
                   clickedIndex === index
-                    ?
-                    <div>
-                      <p>Type: {pokemon.type}</p>
-                      <p>Weight: {pokemon.weight}</p>
-                      <p>Height: {pokemon.height}</p>
-                      <h3>Stats:</h3>
-                      <ul>
-                        {pokemon.stats.map((stat, index) => (
-                          <li key={index}>{stat.name}: {stat.value}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    : ""
-                }
+                    ? */}
+                <div className='flip-card-back'>
+                  <p>Weight: {pokemon.weight}</p>
+                  <p>Height: {pokemon.height}</p>
+                  <h3>Stats:</h3>
+                  <ul>
+                    {pokemon.stats.map((stat, index) => (
+                      <li key={index}>{stat.name}: {stat.value}</li>
+                    ))}
+                  </ul>
+                </div>
+                {/* : ""
+                } */}
               </div>
 
             </div>
